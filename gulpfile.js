@@ -4,6 +4,8 @@ const gulpSass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const useref = require('gulp-useref');
 const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
+const gulpif = require('gulp-if');
 
 function serve() {
     browserSync.init({
@@ -31,6 +33,9 @@ function sass() {
 function bundle() {
     return gulp.src('src/*.html')
         .pipe(useref())
+        .pipe(gulpif(file => file.basename === 'bundle.js', babel({
+            presets: ['@babel/env']
+        })))
         .pipe(gulp.dest('./'));
 }
 

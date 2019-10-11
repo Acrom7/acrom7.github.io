@@ -1,11 +1,21 @@
 function getCities() {
-    return fetch('https://www.mocky.io/v2/5b34c0d82f00007400376066?mocky-delay=700ms')
+    return fetch('https://www.mocky.io/v2/5b34c0d82f00007400376066?mocky-delay=700ms', {
+        mode: 'cors',
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
+    })
         .then(data => data.json())
         .then(data => data['cities']);
 }
 
 function getAllTime(cityId) {
-    return fetch(`https://www.mocky.io/v2/${cityId}?mocky-delay=700ms`)
+    return fetch(`https://www.mocky.io/v2/${cityId}?mocky-delay=700ms`, {
+        mode: 'cors',
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
+    })
         .then(data => data.json())
         .then(data => data['data'])
         .then(data => {
