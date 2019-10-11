@@ -8,10 +8,21 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0"
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-useref": "^4.0.0"
+  },
+  "dependencies": {
+    "inputmask": "^4.0.9",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "uikit": "^3.2.1"
   }
 }

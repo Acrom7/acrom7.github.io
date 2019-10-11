@@ -1,0 +1,24 @@
+$internal-form-select-image: "../../../../public/assets/arrow.png"
+$form-danger-color: hsl(355, 84%, 47%)
+$form-background: hsl(0, 0%, 91%)
+$form-color: black
+$form-focus-background: white
+$form-focus-color: black
+$form-disabled-color: hsl(0, 0%, 64%)
+$form-placeholder-color: black
+
+@mixin hook-form()
+	background-size: 25px
+	font-weight: 500
+	border: 1px solid hsl(0, 0%, 91%)
+	transition: background-color 0s, box-shadow 0.6s
+
+@mixin hook-form-focus()
+	border: 1px solid hsl(0, 0%, 91%)
+	box-shadow: 0 5px 6px 2px hsl(0, 0%, 91%)
+
+@mixin hook-form-danger()
+	background-color: hsl(351, 68%, 94%)
+	border: 1px solid hsl(351, 68%, 94%)
+	&::placeholder
+		color: $form-danger-color

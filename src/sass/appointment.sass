@@ -1,0 +1,62 @@
+$custom-gutter: 20px
+$custom-radius: 4px
+
+.appointment
+	&Wrapper
+		padding: 20px 30px
+	&-company
+		padding-left: 10px
+		font-size: 38px
+		font-weight: bold
+		color: black
+	&-gutter
+		margin-bottom: $custom-gutter
+		border-radius: $custom-radius
+	&-logo
+		width: 40px
+	&-address
+		padding-left: 20px
+	&-datetime
+		display: flex
+		justify-content: space-between
+		@media (max-width: 620px)
+			&
+				flex-wrap: wrap
+	&-date
+		@media (min-width: 621px)
+			margin-right: $custom-gutter
+	&-button
+		display: block
+		margin: 0 auto
+		width: 150px
+		height: 64px
+		background-color: rgb(219, 0, 27)
+		color: white
+		border-radius: 550px
+		border: none
+		font-size: 16px
+		font-weight: bold
+		transition-duration: 0.2s
+		&:hover,
+		&:focus
+			transform: scale(1.05)
+			cursor: pointer
+	&-description
+		margin: 0
+	&-title
+		font-weight: bold
+		color: black
+		margin-top: 0
+	&-message-error
+		display: none
+		font-size: 14px
+		font-weight: 500
+		color: $form-danger-color
+		margin-top: -$custom-gutter + 5px
+
+.flex-container
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	min-height: 100vh
